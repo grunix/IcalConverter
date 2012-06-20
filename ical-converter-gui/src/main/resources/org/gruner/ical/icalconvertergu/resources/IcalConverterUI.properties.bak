@@ -1,0 +1,32 @@
+#NOI18N
+jLabel4.font=Tahoma-Plain-18
+lbBis.toolTipText=W\u00e4hle Datum  aus bis zu dem alle Eintr\u00e4ge importiert werden sollen
+lbFrom.text=Von:
+jMenu2.text=Edit
+jMenu1.text=File
+jMenu3.text=jMenu3
+jMenuItem1.text=Show List
+jButton2.text=Exit
+jLabel1.text=Datum
+jLabel2.text=Titel
+jLabel5.text=Beschr.:
+jPanel5.border.title=Event Details
+jPanel3.border.title=Event List
+text=jTextField2
+
+
+jPanel1.border.title=Calendar Selection
+jButton1.text=Bearbeiten
+jButton3.text=\u00dcbernehmen
+jButton6.text=Auswahl
+HandleExitButton.Action.shortDescription=
+HandleExitButton.Action.text=
+jPanel1.border.title=Calendar Selection
+HandleExitButton.Action.shortDescription=
+HandleExitButton.Action.text=
+btSelectFile.text=Auswahl
+btSaveDetails.text=\u00dcbernehmen
+HandleEditButton.Action.text=
+HandleEditButton.Action.shortDescription=
+btEditDetils.text=Bearbeiten
+jLblEventCount.text=Anzahl von Events

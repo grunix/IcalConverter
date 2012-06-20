@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<project>
+	<modelLocation path='$IDE_project_root$/magicdraw/magicdraw.mdzip'/>
+	<nodes>
+		<node>
+			<nodeUrl url='file:/C:/Users/ladmin/Documents/NetBeansProjects/ical-converter/ical-converter-gui/src/main/java/org/gruner/ical/icalconvertergu/MessageJDialog.java'/>
+			<classifierID id='_17_0_4_88a0276_1332789563031_485584_1964'/>			<!-- MessageJDialog -->
+		</node>
+		<node>
+			<nodeUrl url='file:/C:/Users/ladmin/Documents/NetBeansProjects/ical-converter/ical-converter-gui/src/main/java/org/gruner/ical/icalconvertergu/helper/DateComparator.java'/>
+			<classifierID id='_17_0_4_88a0276_1332789550166_298469_1772'/>			<!-- DateComparator -->
+		</node>
+		<node>
+			<nodeUrl url='file:/C:/Users/ladmin/Documents/NetBeansProjects/ical-converter/ical-converter-gui/src/main/java/org/gruner/ical/icalconvertergu/App.java'/>
+			<classifierID id='_17_0_4_88a0276_1332789553774_856702_1847'/>			<!-- App -->
+		</node>
+		<node>
+			<nodeUrl url='file:/C:/Users/ladmin/Documents/NetBeansProjects/ical-converter/ical-converter-gui/src/test/java/org/gruner/ical/icalconvertergu/AppTest.java'/>
+			<classifierID id='_17_0_4_88a0276_1332789566478_592748_2037'/>			<!-- AppTest -->
+		</node>
+		<node>
+			<nodeUrl url='file:/C:/Users/ladmin/Documents/NetBeansProjects/ical-converter/ical-converter-gui/src/main/java/org/gruner/ical/icalconvertergu/model/EventItemModelController.java'/>
+			<classifierID id='_17_0_4_88a0276_1332789552367_657828_1807'/>			<!-- EventItemModelController -->
+		</node>
+		<node>
+			<nodeUrl url='file:/C:/Users/ladmin/Documents/NetBeansProjects/ical-converter/ical-converter-gui/src/main/java/org/gruner/ical/icalconvertergu/helper/EventItemComparator.java'/>
+			<classifierID id='_17_0_4_88a0276_1332789551245_417019_1790'/>			<!-- EventItemComparator -->
+		</node>
+		<node>
+			<nodeUrl url='file:/C:/Users/ladmin/Documents/NetBeansProjects/ical-converter/ical-converter-gui/src/main/java/org/gruner/ical/gui/IcalConverterApplication.java'/>
+			<classifierID id='_17_0_4_88a0276_1332789548837_319973_1732'/>			<!-- IcalConverterApplication -->
+		</node>
+		<node>
+			<nodeUrl url='file:/C:/Users/ladmin/Documents/NetBeansProjects/ical-converter/ical-converter-gui/src/main/java/org/gruner/ical/icalconvertergu/IcalEventTableView.java'/>
+			<classifierID id='_17_0_4_88a0276_1332789562281_808851_1950'/>			<!-- IcalEventTableView -->
+		</node>
+		<node>
+			<nodeUrl url='file:/C:/Users/ladmin/Documents/NetBeansProjects/ical-converter/ical-converter-gui/src/main/java/org/gruner/ical/icalconvertergu/SaveToDbDialog.java'/>
+			<classifierID id='_17_0_4_88a0276_1332789564131_709549_1993'/>			<!-- SaveToDbDialog -->
+		</node>
+		<node>
+			<nodeUrl url='file:/C:/Users/ladmin/Documents/NetBeansProjects/ical-converter/ical-converter-gui/src/main/java/org/gruner/ical/icalconvertergu/IcalConverterUI.java'/>
+			<classifierID id='_17_0_4_88a0276_1332789554168_37082_1854'/>			<!-- IcalConverterUI -->
+		</node>
+		<node>
+			<nodeUrl url='file:/C:/Users/ladmin/Documents/NetBeansProjects/ical-converter/ical-converter-gui/src/test/java/org/gruner/ical/icalconvertergu/helper/DateComparatorTest.java'/>
+			<classifierID id='_17_0_4_88a0276_1332789565101_367834_2016'/>			<!-- DateComparatorTest -->
+		</node>
+	</nodes>
+</project>

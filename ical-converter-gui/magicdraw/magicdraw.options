@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<PropertyVisitorAcceptor>
+	<mdElement elementClass='PropertyManager'>
+		<name>GENERAL</name>
+		<propertyManagerID>_17_0_4_88a0276_1332789488872_838321_1727</propertyManagerID>
+		<mdElement elementClass='WORKING_ROOT'>
+			<propertyID>WORKING_ROOT</propertyID>
+			<useUnspecified xmi:value='false'/>
+			<containment xmi:value='false'/>
+			<typeElement xmi:value='false'/>
+			<parentApplicant xmi:value='false'/>
+			<value>eee_1045467100313_135436_1</value>
+		</mdElement>
+		<mdElement elementClass='REFERENCE_PATH'>
+			<propertyID>REFERENCE_PATH</propertyID>
+			<containment xmi:value='false'/>
+			<ordered xmi:value='false'/>
+			<value>eee_1045467100313_135436_1</value>
+		</mdElement>
+		<mdElement elementClass='ChoiceProperty'>
+			<propertyID>GENERATE_IMPORTS</propertyID>
+			<propertyDescriptionID>GENERATE_IMPORTS_DESCRIPTION</propertyDescriptionID>
+			<value>FULL_CLASS_NAME</value>
+			<choice xmi:value='DO_NOT_GENERATE^FULL_CLASS_NAME^PACKAGE_NAME'/>
+			<index xmi:value='1'/>
+		</mdElement>
+		<mdElement elementClass='StringProperty'>
+			<propertyID>UNNAMED_ELEMENT_NAME</propertyID>
+			<propertyDescriptionID>UNNAMED_ELEMENT_NAME_DESCRIPTION</propertyDescriptionID>
+			<value>_unnamed_</value>
+		</mdElement>
+		<mdElement elementClass='StringProperty'>
+			<propertyID>UNNAMED_TYPE_NAME</propertyID>
+			<propertyDescriptionID>UNNAMED_TYPE_NAME_DESCRIPTION</propertyDescriptionID>
+			<value>int</value>
+		</mdElement>
+		<mdElement elementClass='ChoiceProperty'>
+			<propertyID>UPDATE_MODEL</propertyID>
+			<propertyDescriptionID>UPDATE_MODEL_DESCRIPTION</propertyDescriptionID>
+			<value>UPDATE_MODEL_BY_CODE</value>
+			<choice xmi:value='UPDATE_MODEL_BY_CODE^MERGE_MODEL_AND_CODE'/>
+			<index xmi:value='0'/>
+		</mdElement>
+		<mdElement elementClass='ChoiceProperty'>
+			<propertyID>DEFAULT_FIELD_MAPPING</propertyID>
+			<propertyDescriptionID>DEFAULT_FIELD_MAPPING_DESCRIPTION</propertyDescriptionID>
+			<value>FIELD_AS_ATTRIBUTE</value>
+			<choice xmi:value='FIELD_AS_ATTRIBUTE^FIELD_AS_ASSOCIATION^FIELD_BY_RULE'/>
+			<index xmi:value='0'/>
+		</mdElement>
+		<mdElement elementClass='ATTRIBUTE_CREATION_RULES'>
+			<propertyID>ATTRIBUTE_CREATION_RULES</propertyID>
+			<propertyDescriptionID>ATTRIBUTE_CREATION_RULES_DESCRIPTION</propertyDescriptionID>
+			<value>attr|*|DataType</value>
+			<value>assoc|*</value>
+		</mdElement>
+		<mdElement elementClass='BooleanProperty'>
+			<propertyID>RESOLVE_GENERIC_TYPES</propertyID>
+			<propertyDescriptionID>RESOLVE_GENERIC_TYPES_DESCRIPTION</propertyDescriptionID>
+			<value xmi:value='true'/>
+		</mdElement>
+	</mdElement>
+</PropertyVisitorAcceptor>
