@@ -22,6 +22,7 @@ import javax.swing.JProgressBar;
 import javax.swing.SwingWorker;
 import org.gruner.ical.icalconvertergu.model.EventItemModelController;
 import org.gruner.ical.icalconvertergu.model.SaveProcess;
+import org.gruner.ical.tool.Completion;
 
 /**
  *
@@ -219,7 +220,7 @@ public class SaveToDbDialog extends javax.swing.JDialog implements PropertyChang
     }
     private Task task;
 
-    class Task extends SwingWorker<Void, Void> {
+    class Task extends SwingWorker<Void, Void> implements Completion{
         /*
          * Main task. Executed in background thread.
          */
@@ -234,7 +235,7 @@ public class SaveToDbDialog extends javax.swing.JDialog implements PropertyChang
             setProgress(0);
 
             //Thread.currentThread().sleep(3000);
-            SaveProcess saveProcess = new SaveProcess();
+            SaveProcess saveProcess = new SaveProcess((Completion)this);
             saveProcess.setPerscentage(persentComplete);
             saveProcess.setController(EventItemModelController.getInstance());
             ExecutorService service = Executors.newSingleThreadExecutor();
@@ -266,6 +267,11 @@ public class SaveToDbDialog extends javax.swing.JDialog implements PropertyChang
             //btStart.setEnabled(true);
             //btEnd.setEnabled(false);
             //taskOutput.append("Done!\n");
+        }
+
+        @Override
+        public void setPersentage(Integer persentageOfComletion) {
+            this.setProgress(persentageOfComletion.intValue());
         }
     }
     private boolean done;

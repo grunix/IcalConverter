@@ -7,14 +7,15 @@ package org.gruner.ical.icalconvertergu.model;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.gruner.ical.icalconvertergu.SaveToDbDialog;
+import org.gruner.ical.tool.Completion;
 
 /**
  *
  * @author ladmin
  */
-public class SaveProcess implements Runnable {
+public class SaveProcess implements Runnable{
 
-
+    private Completion completion = null;
     private Integer perscentage = new Integer(0);
     private static final Logger logger= Logger.getLogger(SaveProcess.class.getName());
 
@@ -37,12 +38,23 @@ public class SaveProcess implements Runnable {
     }
     
     
-    public void SaveProcess(EventItemModelController controller)
+    public  SaveProcess(EventItemModelController controller)
     {
        // super();
         this.controller = controller;
     }
 
+    public  SaveProcess()
+    {
+       // super();
+       //this.controller = controller;
+    }
+
+    public  SaveProcess(Completion completion)
+    {
+       // super();
+        this.completion = completion;
+    }
     private SaveToDbDialog dialog;
     
     public void setSaveDialog(SaveToDbDialog dialog)
@@ -68,7 +80,7 @@ public class SaveProcess implements Runnable {
                 //controller.updateModell("C:/Users/en/Documents/Wünsche/EM - Qualifikation.ics");
             }
                         
-        controller.saveEvents(perscentage);
+        controller.saveEvents(completion);
         System.out.println("SUCCEEDEDSUCCEEDEDSUCCEEDEDSUCCEEDEDSUCCEEDED");
         }
         catch (Exception e)
@@ -79,5 +91,6 @@ public class SaveProcess implements Runnable {
         }
         //dialog.isDone(true);
     }
+
     
 }

@@ -26,6 +26,7 @@ import org.gruner.ical.icalconvertergu.helper.EventItemComparator;
 import org.gruner.ical.icalconverterimpl.IcalImporterServiceImpl;
 import org.gruner.ical.persistence.EventItemPersistenceService;
 import org.gruner.ical.persistenceimpl.EventItemJpaController;
+import org.gruner.ical.tool.Completion;
 
 /**
  *
@@ -154,7 +155,7 @@ public class EventItemModelController implements ListDataListener{
      
     }
  
-    public synchronized void saveEvents(Integer percentComplete)
+    public synchronized void saveEvents(Completion completion)
     {
         Object[] list = eventItemListModel.toArray();
         
@@ -173,14 +174,16 @@ public class EventItemModelController implements ListDataListener{
             if(isInterrupted())
                 break;
             
+            
+            
             EventItem eventItem = (EventItem)object;
             try{
                 //System.out.println("Save Event from:" + eventItem.getStartDate());
                 logger.log(Level.FINER, "Save Event from:" + eventItem.getStartDate() );
                 persistenceService.create(eventItem, em);
                 excatlyPersentage+=percentOfOneElement;
-                percentComplete = excatlyPersentage.intValue();
-                System.out.println("Percentage: " +  percentComplete);
+                completion.setPersentage(Integer.valueOf(excatlyPersentage.intValue()));
+                System.out.println("Percentage: " +  excatlyPersentage);
             }
             catch(Exception e)
             {
