@@ -14,6 +14,8 @@ import org.gruner.ical.icalconverter.EventItem;
  */
 public class EventItemComparator implements Comparator<EventItem>{
 
+    private int test;
+    private int test2;
     @Override
     public int compare(EventItem o1, EventItem o2) {
         Date dateO1 = o1.getStartDate();
