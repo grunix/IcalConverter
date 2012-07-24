@@ -15,19 +15,13 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 import javax.swing.DefaultListModel;
-import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 
 import javax.swing.JList;
 import javax.swing.JTextField;
 import org.gruner.ical.icalconverter.EventItem;
 import org.gruner.ical.icalconvertergu.model.EventItemModelController;
-import org.gruner.ical.icalconvertergu.model.SaveProcess;
-import org.gruner.ical.icalconvertergu.model.SaveProcess;
 import org.jdesktop.application.Action;
 
 /**
@@ -116,6 +110,7 @@ public class IcalConverterUI extends javax.swing.JFrame {
         jComboBox2 = new javax.swing.JComboBox();
         btSelectFile = new javax.swing.JButton();
         btSaveToDB = new javax.swing.JButton();
+        btPrint = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jToolBar1 = new javax.swing.JToolBar();
         jButton2 = new javax.swing.JButton();
@@ -240,6 +235,14 @@ public class IcalConverterUI extends javax.swing.JFrame {
             }
         });
 
+        btPrint.setText(resourceMap.getString("btPrint.text")); // NOI18N
+        btPrint.setName("btPrint"); // NOI18N
+        btPrint.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPrintActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -255,7 +258,9 @@ public class IcalConverterUI extends javax.swing.JFrame {
                     .addComponent(jcalFileName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(33, 33, 33)
                 .addComponent(btSaveToDB, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addComponent(btPrint)
+                .addGap(26, 26, 26))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,7 +269,8 @@ public class IcalConverterUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(btSelectFile)
-                    .addComponent(btSaveToDB, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btSaveToDB, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btPrint))
                 .addGap(4, 4, 4)
                 .addComponent(jcalFileName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -563,6 +569,19 @@ private void jcalFileNamePropertyChange(java.beans.PropertyChangeEvent evt) {//G
         
     }//GEN-LAST:event_btSaveToDBActionPerformed
 
+    private void btPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPrintActionPerformed
+        // TODO add your handling code here:
+
+        /*        To run your application you will need to include in your classpath the JAR files that are in the lib directory. They include
+        DataVision,
+        iText, the Java-PDF library by Bruno Lowagie,
+        JCalendar, the calendar Swing widget by Kai Toedter,
+        BSF, the Bean Scripting Framework from the Apache Jakarta Project,
+        JRuby, the Java implementation of Ruby by the JRuby Project, and
+        */        
+        System.out.println("Now the calendar entries will be printed");
+    }//GEN-LAST:event_btPrintActionPerformed
+
     private void selectFile()
     {
             JFileChooser jFileChooser = new JFileChooser(new File("."));    
@@ -652,6 +671,7 @@ private void jcalFileNamePropertyChange(java.beans.PropertyChangeEvent evt) {//G
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEditDetils;
+    private javax.swing.JButton btPrint;
     private javax.swing.JButton btSaveDetails;
     private javax.swing.JButton btSaveToDB;
     private javax.swing.JButton btSelectFile;

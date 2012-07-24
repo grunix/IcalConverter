@@ -135,7 +135,9 @@
                   </Group>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="btSaveToDB" min="-2" pref="65" max="-2" attributes="0"/>
-                  <EmptySpace pref="129" max="32767" attributes="0"/>
+                  <EmptySpace pref="48" max="32767" attributes="0"/>
+                  <Component id="btPrint" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -147,6 +149,7 @@
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btSelectFile" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btSaveToDB" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="btPrint" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                   <Component id="jcalFileName" min="-2" max="-2" attributes="0"/>
@@ -299,6 +302,15 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btSaveToDBActionPerformed"/>
             <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="btSaveToDBKeyPressed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btPrint">
+          <Properties>
+            <Property name="text" type="java.lang.String" resourceKey="btPrint.text"/>
+            <Property name="name" type="java.lang.String" value="btPrint" noResource="true"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btPrintActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
