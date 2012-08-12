@@ -11,6 +11,8 @@
 package org.gruner.ical.icalconvertergu;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,6 +22,9 @@ import javax.swing.JFileChooser;
 
 import javax.swing.JList;
 import javax.swing.JTextField;
+import jimm.datavision.ErrorHandler;
+import jimm.datavision.Report;
+import jimm.datavision.layout.pdf.PDFLE;
 import org.gruner.ical.icalconverter.EventItem;
 import org.gruner.ical.icalconvertergu.model.EventItemModelController;
 import org.jdesktop.application.Action;
@@ -580,6 +585,35 @@ private void jcalFileNamePropertyChange(java.beans.PropertyChangeEvent evt) {//G
         JRuby, the Java implementation of Ruby by the JRuby Project, and
         */        
         System.out.println("Now the calendar entries will be printed");
+        Report report = new Report();
+        //report.setP
+        report.setDatabasePassword("test");
+        report.setTitle("Wünsche");
+        report.setName("Test.pdf");
+        ErrorHandler.useGUI(true);
+        try{
+        OutputStream out = new FileOutputStream("c:/temp/output.pdf");
+        report.setLayoutEngine(new PDFLE(out));
+        }
+        catch(Exception e)
+        {
+            
+        }
+        // or
+        //Connection connection = new JdbcConnection();
+        //report.setDatabaseConnection(aJdbcConnection);
+        // or
+        //report.setDataSource(new Database(...));
+        
+        // Read the report XML from a file or various stream types.
+        try{
+        report.read( new File("C:/Users/ladmin/Documents/NetBeansProjects/dataVision-Reports/EventItems.rep")); // Must be after database info
+        }
+        catch(Exception e)
+        {
+            
+        }
+        report.run();
     }//GEN-LAST:event_btPrintActionPerformed
 
     private void selectFile()

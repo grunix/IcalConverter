@@ -65,6 +65,10 @@
       <artifactId>DataVision</artifactId>
 
         </dependency>
+    <dependency>
+      <groupId>com.toedter</groupId>
+      <artifactId>jcalendar</artifactId>
+    </dependency>
   </dependencies>
  
 </project>
