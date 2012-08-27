@@ -36,6 +36,9 @@ import org.jdesktop.application.Action;
 public class IcalConverterUI extends javax.swing.JFrame {
 
 
+    public static final String DEFAULT_ICAL_FILE = "c:/temp/deletable/lupo.ics";
+    // old one  "C:/users/mg/workspace-myeclipse-2ßß0/ical-Importer/Mausi's - Wünsche-2011-10-09.ics"
+    
     List<Date> icalTerminliste;
     
     Date icalStartTermin;
@@ -45,8 +48,8 @@ public class IcalConverterUI extends javax.swing.JFrame {
     /** Creates new form IcalConverterUI */
     public IcalConverterUI() {
         initComponents();
-        jcalFileName.setText("C:/users/mg/workspace-myeclipse-2ßß0/ical-Importer/Mausi's - Wünsche-2011-10-09.ics");
-        jcalFileName.setToolTipText("C:/users/mg/workspace-myeclipse-2ßß0/ical-Importer/Mausi's - Wünsche-2011-10-09.ics");
+        jcalFileName.setText(IcalConverterUI.DEFAULT_ICAL_FILE);
+        jcalFileName.setToolTipText(IcalConverterUI.DEFAULT_ICAL_FILE);
         //updateDateChooser(jcalFileName.getText());
         lbFrom.setText("Von:");
         lbBis.setText("Bis:");
@@ -613,7 +616,20 @@ private void jcalFileNamePropertyChange(java.beans.PropertyChangeEvent evt) {//G
         {
             
         }
-        report.run();
+        try{
+            report.runReport();
+            MessageJDialog jdialog = new MessageJDialog(this, false);
+            jdialog.setTitle("Report Generation - Message");
+            jdialog.getjTextMessage().setText("Successfully created report at Location: c:/temp/output.pdf");
+            jdialog.setVisible(true);
+        }
+        catch (Exception e)
+        {
+            MessageJDialog jdialog = new MessageJDialog(this, false);
+            jdialog.setTitle("Report Generation - Message");
+            jdialog.getjTextMessage().setText("Failed to creat report at Location: c:/temp/output.pdf" + e);
+            jdialog.setVisible(true);
+        }
     }//GEN-LAST:event_btPrintActionPerformed
 
     private void selectFile()

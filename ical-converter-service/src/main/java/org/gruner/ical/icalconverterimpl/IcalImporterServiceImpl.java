@@ -154,6 +154,8 @@ public class IcalImporterServiceImpl implements IcalService {
                     
                     java.util.Date datum = df.parse(vevent.getStartDate().getDate().toString());
 
+                    if(sdescription.length()>255)
+                        sdescription = sdescription.substring(0, 255-1);
                     returnList.add(new EventItem(
                             datum, 
                             vevent.getProperty("SUMMARY").getValue(), 

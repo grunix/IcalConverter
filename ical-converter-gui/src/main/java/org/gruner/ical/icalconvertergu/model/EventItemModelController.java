@@ -180,6 +180,12 @@ public class EventItemModelController implements ListDataListener{
             try{
                 //System.out.println("Save Event from:" + eventItem.getStartDate());
                 logger.log(Level.FINER, "Save Event from:" + eventItem.getStartDate() );
+                System.out.println(eventItem.getDescription());
+                if(eventItem.getDescription().length()>=128)
+                {
+                    System.out.println("SETTTTTTING DESC TO NULL");
+                    eventItem.setDescription("NULL");
+                }
                 persistenceService.create(eventItem, em);
                 excatlyPersentage+=percentOfOneElement;
                 completion.setPersentage(Integer.valueOf(excatlyPersentage.intValue()));

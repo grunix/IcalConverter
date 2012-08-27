@@ -51,13 +51,21 @@ public class EventItem implements Serializable{
     }
 
     public String getDescription() {
-        if(description.length()>255)
-            return description.substring(0, 254);
+        if(description.length()>128)
+            return description.substring(0, 127);
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescription(String desc) {
+        
+        if(desc.length()>128)
+        {
+            this.description = desc.substring(0, 127);
+        }
+        else
+        {
+            this.description = desc;
+        }
     }
 
     public Date getModificationionDate() {
@@ -90,7 +98,7 @@ public class EventItem implements Serializable{
     
     private String summary = null;
     
-    @Column(length=512)
+    
     private String description = null;
     
 }
