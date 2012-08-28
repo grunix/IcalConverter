@@ -6,6 +6,7 @@ package org.gruner.ical.icalconvertergu.model;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.gruner.ical.icalconvertergu.MessageJDialog;
 import org.gruner.ical.icalconvertergu.SaveToDbDialog;
 import org.gruner.ical.tool.Completion;
 
@@ -80,11 +81,15 @@ public class SaveProcess implements Runnable{
                 //controller.updateModell("C:/Users/en/Documents/Wünsche/EM - Qualifikation.ics");
             }
                         
-        controller.saveEvents(completion);
-        System.out.println("SUCCEEDEDSUCCEEDEDSUCCEEDEDSUCCEEDEDSUCCEEDED");
+            controller.saveEvents(completion);
+            
+            System.out.println("SUCCEEDEDSUCCEEDEDSUCCEEDEDSUCCEEDEDSUCCEEDED");
+            
+           MessageJDialog.showMessage("Save Entries to DB", "All entries successfully saved to Database", null);
         }
         catch (Exception e)
         {
+            MessageJDialog.showMessage("Save Entries to DB", "ATTENTION failed to save calender entries to Database", e);
             e.printStackTrace();
             logger.log(Level.INFO, "FAIL-FAIL-FAIL");
             System.out.println("FAILED_FAILED_FAILED");

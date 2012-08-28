@@ -10,6 +10,8 @@
  */
 package org.gruner.ical.icalconvertergu;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import javax.swing.JTextArea;
 import org.jdesktop.application.Action;
 
@@ -158,4 +160,20 @@ public class MessageJDialog extends javax.swing.JDialog {
     }
 
 
+    public  static void showMessage(String title, String message, Exception e)
+    {
+        MessageJDialog md = new MessageJDialog(null, true);
+        md.setTitle(title);
+        md.getjTextMessage().setText(message);
+        if(e!=null)
+        {
+            StringWriter sw = new StringWriter(512);
+            PrintWriter pw = new PrintWriter(sw);
+            e.printStackTrace(pw);
+            md.getjTextMessage().setText(message + "\n" + sw.toString()) ;
+        }
+        md.setVisible(true);
+    
+    }
+    
 }

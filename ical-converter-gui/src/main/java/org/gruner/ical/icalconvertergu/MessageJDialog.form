@@ -95,7 +95,6 @@
             <Property name="action" type="javax.swing.Action" editor="org.netbeans.modules.swingapp.ActionEditor">
               <action class="org.gruner.ical.icalconvertergu.MessageJDialog" id="handleClose" methodName="handleClose"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Close"/>
             <Property name="name" type="java.lang.String" value="jButton1" noResource="true"/>
           </Properties>
         </Component>
