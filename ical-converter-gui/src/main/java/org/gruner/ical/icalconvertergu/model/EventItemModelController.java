@@ -184,7 +184,7 @@ public class EventItemModelController implements ListDataListener{
                 if(eventItem.getDescription().length()>=128)
                 {
                     System.out.println("SETTTTTTING DESC TO NULL");
-                    eventItem.setDescription("NULL");
+                    //eventItem.setDescription("NULL");
                 }
                 persistenceService.create(eventItem, em);
                 excatlyPersentage+=percentOfOneElement;
