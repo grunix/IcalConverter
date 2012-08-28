@@ -44,6 +44,8 @@ public class SaveToDbDialog extends javax.swing.JDialog implements PropertyChang
     public SaveToDbDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
+        btStartActionPerformed(null);
     }
 
     /** This method is called from within the constructor to
@@ -138,6 +140,8 @@ public class SaveToDbDialog extends javax.swing.JDialog implements PropertyChang
         //task.cancel(true);
         
         this.setVisible(false);
+        
+        
     }//GEN-LAST:event_btEndActionPerformed
 
     private void btStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btStartActionPerformed
